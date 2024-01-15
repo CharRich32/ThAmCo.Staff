@@ -10,10 +10,4 @@
     <PackageReference Include="Auth0.AspNetCore.Authentication" Version="1.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-    <Folder Include="Pages\Customers\" />
-    <Folder Include="Pages\Orders\" />
-  </ItemGroup>
-
 </Project>

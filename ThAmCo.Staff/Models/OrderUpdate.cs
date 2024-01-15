@@ -2,5 +2,6 @@
 {
     public class OrderUpdate
     {
+        public OrderStatus OrderStatus { get; set; }
     }
 }
