@@ -2,7 +2,6 @@ using Auth0.AspNetCore.Authentication;
 using Polly;
 using Polly.Extensions.Http;
 using ThAmCo.Staff.Services;
-
 namespace ThAmCo.Staff
 {
 	public class Program
@@ -26,11 +25,12 @@ namespace ThAmCo.Staff
 					client.BaseAddress = new Uri(builder.Configuration["Auth:Authority"]);
 				});
 
-				builder.Services.AddHttpClient("OrdersClient", client => {
+				builder.Services.AddHttpClient("OrdersClient", client =>
+				{
 					client.BaseAddress = new Uri(builder.Configuration["WebServices:Orders:BaseAddress"]);
-				})
-				.AddPolicyHandler(GetRetryPolicy())
-				.AddPolicyHandler(GetCircuitBreakerPolicy());
+				});
+					//PolicyHandler(GetRetryPolicy())
+				//.AddPolicyHandler(GetCircuitBreakerPolicy());
 
 				builder.Services.AddTransient<IOrdersService, OrdersService>();
 			}

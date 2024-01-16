@@ -1,12 +1,10 @@
 ﻿using ThAmCo.Staff.Models;
 
-namespace ThAmCo.Staff.Services
-{
-	public interface ICustomerService
-	{
-		public Task<List<CustomerGet>> GetCustomersAsync();
-		public Task<CustomerGet?> GetCustomerAsync(int id);
-		public Task<bool> DeleteCustomerAsync(int id);
+namespace ThAmCo.Staff.Services {
+    public interface ICustomerService {
+        public Task<List<CustomerGetDto>> GetCustomersAsync();
+        public Task<CustomerGetDto?> GetCustomerAsync(int id);
+        public Task<bool> DeleteCustomerAsync(int id);
 
-	}
+    }
 }

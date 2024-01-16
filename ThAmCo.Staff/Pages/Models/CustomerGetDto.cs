@@ -1,7 +1,5 @@
-﻿namespace ThAmCo.Staff.Models
-{
-    public class CustomerGet
-    {
+﻿namespace ThAmCo.Staff.Models {
+    public class CustomerGetDto {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
         public string EmailAddress { get; set; } = null!;

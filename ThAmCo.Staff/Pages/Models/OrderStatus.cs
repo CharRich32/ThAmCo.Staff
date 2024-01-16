@@ -1,7 +1,6 @@
 ﻿namespace ThAmCo.Staff.Models
 {
-    public enum OrderStatus
-    {
+    public enum OrderStatus {
         Pending,
         Confirmed,
         Dispatched,

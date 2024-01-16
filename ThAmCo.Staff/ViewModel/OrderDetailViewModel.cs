@@ -11,7 +11,7 @@ namespace ThAmCo.Staff.ViewModel
 		public OrderStatus OrderStatus { get; set; }
 		public DateTime SubmittedDate { get; set; }
 		public DateTime UpdatedDate { get; set; }
-		public List<Order> OrderDetails { get; set; } = new List<Order>();
+		public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 	}
 
 }

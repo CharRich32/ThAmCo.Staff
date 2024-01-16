@@ -10,12 +10,10 @@
 </div>
 
 <table>
-    @foreach (var order in Model.orders)
+    @foreach (var order in await Model.orders)
     {
         <tr>
             <td>@order.CustomerId</td>
-            <td>@order.Products.First().Name</td>
-            <td>@order.Products.First().Price</td>
         </tr>
     }
 </table>
