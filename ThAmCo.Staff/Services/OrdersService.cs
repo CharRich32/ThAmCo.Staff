@@ -21,7 +21,7 @@ namespace ThAmCo.Staff.Services {
         }
 
         private async Task<string> GetOrRefreshTokenAsync() {
-            // Check if token already exists this session
+            // Check if token already exists this session allows user to login 
             if (_token != null && DateTime.UtcNow < _tokenExpiration) {
                 return _token.access_token;
             }

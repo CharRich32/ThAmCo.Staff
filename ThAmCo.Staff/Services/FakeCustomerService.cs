@@ -3,7 +3,7 @@
 namespace ThAmCo.Staff.Services {
     public class FakeCustomerService : ICustomerService {
 
-        // Make static to have data persist through requests to service, for delete faking method 
+        // Make static to have data persist through requests to service, for delete faking method for the staff 
         private static readonly List<CustomerGetDto> _customers = new() {
             new CustomerGetDto { Id = 1, Name = "Charlie Richardson", EmailAddress = "charlie.r@gmail.com", PhoneNumber = "03463 567890", AddressLine1 = "123 Lindrick Street", City = "Middlesbrough", County = "Redcar", PostCode = "TS11 8HT", AvailableFunds = 153.20 },
             new CustomerGetDto { Id = 2, Name = "Jason Ankers", EmailAddress = "jason.a@example.com", PhoneNumber = "05673 678301", AddressLine1 = "456 Birch Road", City = "Middlesbrough", County = "Redcar", PostCode = "TS1 1AA", AvailableFunds = 18.24 },

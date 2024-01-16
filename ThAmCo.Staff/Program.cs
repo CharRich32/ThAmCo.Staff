@@ -42,7 +42,7 @@ namespace ThAmCo.Staff
 			});
 
 			// Add services to the container.
-			// TODO: Change from razor to controllers
+
 			builder.Services.AddRazorPages();
 
 			var app = builder.Build();
