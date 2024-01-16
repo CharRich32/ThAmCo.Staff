@@ -11,7 +11,7 @@ namespace ThAmCo.Staff
 		{
 			var builder = WebApplication.CreateBuilder(args);
 
-			// Always implement fake customer service
+			// Always implement fake customer service when ran
 			builder.Services.AddTransient<ICustomerService, FakeCustomerService>();
 
 			if (builder.Configuration.GetValue<bool>("WebServices:Orders:UseFake", false))
@@ -29,7 +29,8 @@ namespace ThAmCo.Staff
 				{
 					client.BaseAddress = new Uri(builder.Configuration["WebServices:Orders:BaseAddress"]);
 				});
-					//PolicyHandler(GetRetryPolicy())
+					
+				//PolicyHandler(GetRetryPolicy())
 				//.AddPolicyHandler(GetCircuitBreakerPolicy());
 
 				builder.Services.AddTransient<IOrdersService, OrdersService>();
